@@ -15,7 +15,7 @@ public class ArabamAppTest {
 
     AndroidDriver<AndroidElement> driver; //android cihazlarin driveri
 
-    final String cihazAdi="PIXEL";
+    final String cihazAdi="PIXEL2";
     final String platformIsmi="Android";
     final String version="10.0";
     final String automation="UiAutomator2";

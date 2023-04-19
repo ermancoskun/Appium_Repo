@@ -16,7 +16,7 @@ public class DenemeTest {
     AndroidDriver<AndroidElement> driver; //android cihazlarin driveri
     // AppiumDriver<MobileElement> appiumDriver; // hem android hem ios calisir
 
-    final String cihazAdi="PIXEL";
+    final String cihazAdi="PIXEL2";
     final String platformIsmi="Android";
     final String version="10.0";
     final String automation="UiAutomator2";
