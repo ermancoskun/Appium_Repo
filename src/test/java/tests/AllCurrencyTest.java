@@ -49,8 +49,10 @@ public class AllCurrencyTest {
 
         // cevrilen tutar screenShot olarak kaydedilir
 
-        File screenShot=driver.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenShot,new File("paraSonucu.jpg"));
+        // File screenShot=driver.getScreenshotAs(OutputType.FILE);
+        // FileUtils.copyFile(screenShot,new File("paraSonucu.jpg"));
+
+        ReusableMethods.getScreenshot("AllCurrency");
 
     }
 
