@@ -32,7 +32,7 @@ public class KiwiTest {
         page.guestButton.click();
         Thread.sleep(500);
         // ardinda gelecek olan 3 adimada yesil butona basilarak devam edilir
-        page.ucButtonTiklama(0,3,523,2035,500);
+        KiwiPage.ucButtonTiklama(0,3,523,2035,500);
         // Trip type,one way olarak secilir
         page.returnButton.click();
         page.oneWay.click();
@@ -44,7 +44,13 @@ public class KiwiTest {
         page.izmir.click();
         page.choose.click();
         // varis ulkesi secenegine tiklanir ve gidilecek ulke girilir
+        page.anyWhere.click();
+        driver.getKeyboard().pressKey("berlin");
+        page.choose.click();
+        page.anyTimeButtonClick();
         // gidis tarihi mayis ayinin 21 i olarak secilir ve set date e tiklanir
+        TouchAction action=new TouchAction<>(driver);
+
         // search butonuna tiklanir
         // en  ucuz ve aktarmasiz filtrelemeleri yapilir
         // gelen bilet fiyati kaydedilir ve kullanicin telefonuna sms olarak gonderilir

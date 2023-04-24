@@ -20,8 +20,8 @@ public class KiwiPage {
     @FindBy(xpath = "//*[@text='Continue as a guest']")
     public WebElement guestButton;
 
-    TouchAction action=new TouchAction<>(Driver.getAndroidDriver());
-    public void ucButtonTiklama(int baslangic, int bitis, int xCoordinat, int yCoordinat,int wait){
+    static TouchAction action=new TouchAction<>(Driver.getAndroidDriver());
+    public static void ucButtonTiklama(int baslangic, int bitis, int xCoordinat, int yCoordinat,int wait){
         for (int i = baslangic; i < bitis; i++) {
             action.press(PointOption.point(xCoordinat,yCoordinat))
                     .waitAction(WaitOptions.waitOptions(Duration.ofMillis(wait)))
@@ -47,5 +47,18 @@ public class KiwiPage {
 
     @FindBy(xpath = "//*[@text='Choose']")
     public WebElement choose;
+
+    @FindBy(xpath = "(//*[@text='Berlin, Germany'])[1]")
+    public WebElement berlin;
+
+    @FindBy(xpath =  "(//*[@text='Anywhere'])[1]"  )
+    public WebElement anyWhere;
+
+    @FindBy(xpath = "(//*[@text='Anywhere'])[1]")
+    private WebElement anyTimeButton;
+
+    public void anyTimeButtonClick(){
+        anyTimeButton.click();
+    }
 
 }
